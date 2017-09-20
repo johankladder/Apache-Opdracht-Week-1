@@ -1,8 +1,11 @@
 RewriteEngine On
 RewriteBase /
+
+# Images:
 RewriteCond %{REQUEST_URI} !(img)
 RewriteCond %{REQUEST_URI}  (\.png|\.jpg|\.gif)$
-RewriteRule [^\/]+$ img/code%1
+RewriteCond %{REQUEST_FILENAME} (.*)/[a-z]+/(.+)\.(gif|jpe?g|png)$
+RewriteRule [^\/]+$ img/%2.%3
 
 
 
