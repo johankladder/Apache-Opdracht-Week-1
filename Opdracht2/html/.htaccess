@@ -2,7 +2,7 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_URI} !(img)
 RewriteCond %{REQUEST_URI}  (\.png|\.jpg|\.gif)$
-RewriteRule   [^\/]+$ http://opdracht2.local/img/code.jpg
+RewriteRule [^\/]+$ img/code%1
 
 
 
